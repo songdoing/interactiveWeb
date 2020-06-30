@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web</title>
+    <style>
+        .box-container {
+            display : flex;
+        }
+        .box {
+            width : 100px;
+            height : 100px;
+            border : 2px solid black;
+            background : rgba(255, 255, 0, 0.7);
+        }
+        .box:hover {
+            /*transform: scale(2) rotate(15deg);*/
+            /*다른 거에는 영향 미치지 않고, 도형의 중심으로 그 도형만 크기 바꿈*/
+            /*transform : skew(30deg);*/
+            /*수평방향으로 비틀어짐(수직방향 비틀기는 skewY()씀*/
+            /*transform: translate(30px, 10px);*/
+            /*X축, Y축 이동 (위로 올리는 건 translateY(-10px)*/
+            transform: scale(1.5);
+            transform-origin: left top; /*기준점을 중앙에서 왼위*/
+            /*transform-origin : 0% 0%; x축, y축 왼위*/
+            /*transform-origin : 100% 100%; x축, y축 오아*/
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia inventore delectus quae alias temporibus corporis fugiat blanditiis excepturi sint, voluptas cum sequi ad nam maxime animi quia vel, sed laborum.
+    </p>
+    <div class="box-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum praesentium culpa itaque ipsum nemo fugit consequuntur sequi quas, vitae exercitationem asperiores temporibus deleniti illo aliquid nulla minima totam. Ipsam, laudantium?
+    </p>
+</body>
+</html>
