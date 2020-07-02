@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web</title>
+    <style>
+        .world {
+            display : flex;
+            align-items: center;
+            justify-content: center; /*글씨를 정중앙으로 만드는 3줄*/
+            width : 80vw; /*창크기 전체(100vw X 100vh)*/
+            height : 80vh;
+            background : #fff000;
+            /*perspective: 300px; 배경을 3D로 만들어야 함, 그 안의 오브젝트들이 보는 사람입장에서 극적으로 들어감*/
+        }
+        .card { 
+            display : flex;
+            align-items: center;
+            justify-content: center; /*글씨를 정중앙으로 만드는 3줄*/
+            width : 100px;
+            height : 150px;
+            margin : 1em;
+            border-radius: 0.5em; /*fontsize의 크기에 따라가려고 em를 썼다*/
+            font-size : 1.5rem; /*root html의 폰트크기를 따라간다*/
+            transform: perspective(500px) rotateY(45deg); /*오브젝트각각 같은 비율로 비틀어짐*/
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 3D</h1>
+    <div class="world">
+        <div class="card">CARD</div>
+        <div class="card">CARD</div>
+        <div class="card">CARD</div>
+    </div>
+</body>
+</html>
