@@ -26,17 +26,20 @@
             justify-content: center;
             background: #fff000;
             border : 2px solid black;
-            animation : sample-ani 2s linear infinite;
+            animation : sample-ani 3s linear forwards;
             /*
             animation-name : sample-ani;
             animation-duration: 2s;
             animation-timing-function : linear;
             animation-delay : 0s;
             animation-iteration-count : infinite;
-            animation-direction : normal;
-            animation-fill-mode : none;
-            animation=play-state : running;
+            animation-direction : normal; alternate(반복), reverse, alternate-reverse
+            animation-fill-mode : none; forwards(마지막지점에 멈춤)
+            animation-play-state : running;
             */
+        }
+        .box:hover {
+            animation-play-state : paused;
         }
         
     </style>
