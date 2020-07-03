@@ -25,7 +25,9 @@
             
             transform : rotateY(0deg);
             transition : 1s;
-            transform-style : preserve-3d; /*world에만 3d를 만들어주고, card부모div도 3d환경을 card-side에 전달해줘야해*/
+            transform-style : preserve-3d; 
+            /*world에만 3d를 만들어주고, card부모div도 3d환경을 card-side에 전달해줘야해*/
+            /*exploer는 지원 안됨*/
             transform-origin : left;
         }
         .card-side {
@@ -39,7 +41,9 @@
             height : 100%;
             border-radius: 0.5em; /*fontsize의 크기에 따라가려고 em를 썼다*/
             font-size : 1.5rem; /*root html의 폰트크기를 따라간다*/
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden; /*뒷면은 안 보이도록*/
+            /*사파리에서 지원하려면 -webkit 접두어 해야한다. 표준스탈이 마지막에*/
         }
         .card-side-front {
             z-index : 1;
