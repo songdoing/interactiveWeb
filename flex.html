@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web</title>
+    <style>
+        .container {
+            display : flex;
+            /*flex-direction: column; 가로로 나뉜다. */
+            /*기본은 row. 세로로 나뉜다, 오뎅꼬치가 축*/
+            /*flex-direction: row;*/
+            /*justify-content: center; 중앙정렬*/
+            /*flex-start가 기본값, 축을 기준으로 왼쪽으로 정렬한다
+            flex-end(오른쪽으로 정렬)
+            space-between(양쪽 붙고, 사이사이에 공간
+            space-around(양쪽끝도 여백)
+            */
+            /*align-items: center; 
+            꼬치축에서 뜯어내는 방향, 축의 직각으로 정렬*/
+            height: 80vh;
+            background: gray;
+        }
+        .item {
+            flex-grow: 1; 
+            /*숫자를 넣어주면 브라우저을 플랙스하게 가득채운다 숫자는 여백비율*/
+            flex-basis: 0; /*정확한 비율로 나눈다, 기본값은 auto*/
+            /*축약형은 flex : 1; 하면
+            grow :1; shrink:1; basis:0;이다*/
+            padding : 2em;
+            border : 3px solid black;
+            background:  white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex</h1>
+    <div class="container">
+        <div class="item">AAA</div>
+        <div class="item">BBBBBBB</div>
+        <div class="item">CCC</div>
+        <div class="item">D</div>
+        <div class="item">EEE</div>
+    </div>
+</body>
+</html>
